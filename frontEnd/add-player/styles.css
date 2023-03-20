@@ -1,0 +1,27 @@
+#addPlayerForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 1rem auto;
+    text-align: center;
+    width: 30%;
+}
+
+#buttonGroup {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    width: 100%;
+}
+
+#clearBtn:hover {
+    background-color: orange;
+    color: rgb(0, 132, 255);
+}
+
+#cancelBtn:hover {
+    background-color: red;
+    color: white;
+    }
+    
+::placeholder {font-style: italic;}
