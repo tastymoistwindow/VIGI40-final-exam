@@ -1,0 +1,19 @@
+#playerListTable {
+    margin: 2rem auto;
+    width: 50%;
+}
+
+table {
+    text-align: center;
+}
+
+#deleteBtn:hover {
+    background-color: red;
+    color: white;
+}
+
+#editBtn:hover {
+    background-color: orange;
+    color: rgb(0, 132, 255);
+}
+
