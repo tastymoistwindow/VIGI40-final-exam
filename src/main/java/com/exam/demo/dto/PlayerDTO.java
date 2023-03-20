@@ -37,7 +37,10 @@ public class PlayerDTO {
 
             if (months.equals("0")) {
                 playerExperience = years + " years";
-            } else
+            }
+            if (years.equals("0"))
+                playerExperience = months + " months";
+            else
                 playerExperience = years + " years, " + months + " months";
 
             this.playerExperience = playerExperience;
@@ -52,8 +55,11 @@ public class PlayerDTO {
             this.sex = "Male";
         } else if (String.valueOf(id).startsWith("4") || String.valueOf(id).startsWith("6")) {
             this.sex = "Female";
-        } else
-            this.sex = "Sex not provided";
+        } else this.sex = "Sex not provided";
+
+
+        // bandziau padaryti, kad kai age=0 (suvedus nesamoninga id pvz. 333333333333), rodytu "Sex not provided"
+        // bet else-if nei su getAge()==0 , nei age==0 neveike  - jei gali pakomentuok kaip tai galeciau aprasyti, aciu.
     }
 
 
