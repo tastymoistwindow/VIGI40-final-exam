@@ -1,0 +1,12 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+nav {
+    margin-bottom: 10rem;
+}
+
+a:link {text-decoration: none;}

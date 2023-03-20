@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "5b028dfe-eacc-4e30-8238-874ca9b09c50",
+		"name": "full stack exam",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25952377"
+	},
+	"item": [
+		{
+			"name": "Get all players",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/player",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"player"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get individual player by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/player/:playerId",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"player",
+						":playerId"
+					],
+					"variable": [
+						{
+							"key": "playerId",
+							"value": "50111140105",
+							"description": "ID of the player"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add player",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 49512120113,\r\n    \"name\": \"Vardas-12\",\r\n    \"lastName\": \"Pavarde-12\",\r\n    \"email\": \"Email12@email.com\",\r\n    \"playStartDate\": \"2007-01-24\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/player",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"player"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete player by ID",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/player/:playerId",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"player",
+						":playerId"
+					],
+					"variable": [
+						{
+							"key": "playerId",
+							"value": "60212020105",
+							"description": "ID of the player"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Patch player by Id",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"patchedName\",\r\n    \"lastName\": \"patchedLastName\",\r\n    \"email\": \"patchedEmail@email.com\",\r\n    \"playStartDate\": \"2008-05-05\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/player/:playerId",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"player",
+						":playerId"
+					],
+					"variable": [
+						{
+							"key": "playerId",
+							"value": "49203290105",
+							"description": "ID of the player"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:8080"
+		}
+	]
+}
